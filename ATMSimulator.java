@@ -1,13 +1,9 @@
 import java.util.Scanner;
-
 public class ATMSimulator {
-
     static double balance = 10000.00;
-
     public static void checkBalance() {
         System.out.println("Your current balance: Rs. " + balance);
     }
-
     public static void deposit(double amount) {
         if (amount <= 0) {
             System.out.println("Invalid amount.");
@@ -17,7 +13,6 @@ public class ATMSimulator {
         System.out.println("Rs. " + amount + " deposited successfully.");
         System.out.println("New balance: Rs. " + balance);
     }
-
     public static void withdraw(double amount) {
         if (amount <= 0) {
             System.out.println("Invalid amount.");
@@ -29,13 +24,10 @@ public class ATMSimulator {
             System.out.println("Remaining balance: Rs. " + balance);
         }
     }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
-
         System.out.println("======= Welcome to ATM =======");
-
         do {
             System.out.println("\n1. Check Balance");
             System.out.println("2. Deposit");
@@ -43,7 +35,6 @@ public class ATMSimulator {
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-
             switch (choice) {
                 case 1:
                     checkBalance();
@@ -65,7 +56,5 @@ public class ATMSimulator {
                     System.out.println("Invalid choice. Try again.");
             }
         } while (choice != 4);
-
-        scanner.close();
     }
 }
